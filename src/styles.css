@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("../src/assets/1.png");
+}
+.navegador{
+    height: 75px;
+    width: 100%;
+}
+.flotarDerecha{
+    float: right;
+}
+.baner{
+    position: absolute;
+    z-index: 1;
+    border: beige solid 2px;
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+}
+.perfil{
+    position:relative;
+    z-index: 2;
+    margin-top: 300px;
+    height: 200px;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 100px;
+    border: black solid 1px;
+
+}
+.contenedor{
+    border-color: cornflowerblue;
+    height: auto;
+    width: 99%;
+    margin-left: auto;
+    margin: 10px 10px;
+    border-radius: 32px;
+    padding: 20px;
+}
+footer{
+    margin-top: 10px;
+}
