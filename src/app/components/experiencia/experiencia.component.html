@@ -2,9 +2,29 @@
     <div class="card">
         <div class="card-header">
             <h1> Experiencia </h1>
-            <div class="card-body">
-
+            <div class="btn-edit">
+                <a href="#" class="btn-right"> <i class="fa fa-plus"></i> </a>
             </div>
+        </div>
+        <div>
+            <ul class="item-list">
+                <li *ngFor="let exper of experienciaList">
+                    <div class="data-container">
+                        <a href="#">
+                            <div class="logo-imagen-container">
+                                <img src="" alt="">
+                            </div>
+                            <div class="list-info">
+                                <div>
+                                    <h3>{{exper.posicion}}</h3>
+                                    <p>{{exper.lugar}} <span> {{exper.modo}} </span></p>
+                                    <h4>{{exper.comienzo}}</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
