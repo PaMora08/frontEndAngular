@@ -10,7 +10,7 @@
             "nombre": "Esc. Superior Nº 49 Cap. Gral. J.J. Urquiza, Nivel Superior. Rosario, Santa Fe",
             "titulo": "Analista de sistemas de Computación",
             "img": "",
-            "comiennzo": "2011",
+            "comienzo": "2011",
             "fin": "2013"
         },
         {
@@ -18,14 +18,13 @@
             "titulo": "Ingenieria en Sistemas de Computación",
             "img": "",
             "comienzo": "1999",
-            "fin": "2002",
-            "estado": "aprobado 16 materias"
+            "fin": "2002"
         },
         {
-            "nombre": "Esc. Libertador Simón Bolívar N° 4-084 Nivel Secundario. San Martín, Mendoza",
+            "nombre": "Esc. Libertador Simón Bolívar N° 4-084, Nivel Secundario San Martín, Mendoza", 
             "titulo": "Bachiller con Orientación Administrativa",
             "img": "",
-            "comiennzo": "1994",
+            "comienzo": "1994",
             "fin": "1998"
         }
         ],
@@ -39,7 +38,8 @@
             "proyectos": 
             {
                 "nombre" : "Tienda de Tejidos Online",
-            "descripcion": "Sitio web de tejidos, desarrollado en HTML5, CSS, BOOTSTRAP Y JAVASCRIPT "
+            "descripcion": "Sitio web de tejidos, desarrollado en HTML5, CSS, BOOTSTRAP Y JAVASCRIPT ",
+            "url" : "https://pamora08.github.io/TPCodoACodo/"
             }
         
 }
