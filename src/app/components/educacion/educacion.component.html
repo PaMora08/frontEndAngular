@@ -1,30 +1,24 @@
 <div class="cotenedor">
-    <div class="card">
-        <div class="card-header">
-            <h1>Educación </h1>
-            <div class="card-body">
-                <div class="btn-edit"> 
-                    <a href="#" class="bt-right"> <i class="fa fa-pen"></i> </a>
-                </div>
-                <ul class="item-list">
-                    <li *ngFor="let edu of educacionList">
-                        <div class="data-container">
-                            <a href="#">
-                                <div class="logo-image-container">
-                                    <img class="logo-image" [src]="edu.img">
-                                </div>
-                                <div class="list-info">
-                                    <div>
-                                        <h3>{{edu.nombre}}</h3>
-                                        <p>{{edu.titulo}}</p>
-                                        <p><time>{{edu.comienzo}}</time> - <time>{{edu.fin}}</time></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <h1>Educación </h1>
+    <div class="btn-edit"> 
+        <a href="#" class="bt-right"> <i class="fa fa-pen"></i> </a>
     </div>
+    <ul class="item-list">
+        <li *ngFor="let edu of educacionList">
+            <div class="data-container">
+                <a href="#">
+                    <div class="logo-image-container">
+                        <img class="logo-image" [src]="edu.img">
+                    </div>
+                    <div class="list-info">
+                        <div>
+                            <h3>{{edu.nombre}}</h3>
+                            <p>{{edu.titulo}}</p>
+                            <p><time>{{edu.comienzo}}</time> - <time>{{edu.fin}}</time></p>
+                        </div>
+                    </div>
+                 </a>
+            </div>
+        </li>
+    </ul>
 </div>

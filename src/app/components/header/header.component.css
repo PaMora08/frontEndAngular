@@ -1,0 +1,25 @@
+.baner{
+    position: absolute;
+    z-index: 1;
+    border: beige solid 2px;
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+}
+.perfil{
+    position:relative;
+    z-index: 2;
+    margin-top: 300px;
+    height: 200px;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 100px;
+    border: black solid 1px;
+
+}
+.contenedor{
+    height: auto;
+    width: 70%;
+    margin: 10px 10px;
+    padding: 20px;
+}
