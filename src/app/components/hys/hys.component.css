@@ -4,3 +4,10 @@
     margin: 10px 10px;
     padding: 20px;
 }
+div{
+    display: inline;
+}
+img{
+    padding: 40px;
+    margin: 10px 10px;
+}

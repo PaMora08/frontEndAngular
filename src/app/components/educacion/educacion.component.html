@@ -1,24 +1,23 @@
-<div class="cotenedor">
+<div class="row">
     <h1>Educación </h1>
     <div class="btn-edit"> 
         <a href="#" class="bt-right"> <i class="fa fa-pen"></i> </a>
     </div>
-    <ul class="item-list">
-        <li *ngFor="let edu of educacionList">
-            <div class="data-container">
+    <div class="col-1"></div>
+    <div class="col-11">
+        <ul class="item-list">
+            <li *ngFor="let edu of educacionList">
                 <a href="#">
-                    <div class="logo-image-container">
-                        <img class="logo-image" [src]="edu.img">
-                    </div>
+                    <img class="logo-image" [src]="edu.img">
+                </a>
                     <div class="list-info">
-                        <div>
-                            <h3>{{edu.nombre}}</h3>
-                            <p>{{edu.titulo}}</p>
-                            <p><time>{{edu.comienzo}}</time> - <time>{{edu.fin}}</time></p>
-                        </div>
+                       <div>
+                        <h3>{{edu.nombre}}</h3>
+                        <p>{{edu.titulo}}</p>
+                        <p><time>{{edu.comienzo}}</time> - <time>{{edu.fin}}</time></p>
                     </div>
-                 </a>
-            </div>
-        </li>
-    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
