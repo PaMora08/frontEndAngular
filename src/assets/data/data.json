@@ -1,7 +1,7 @@
 {
     "nombre": "Pamela Eugenia Morales",
-    "imgFondo": "https://github.com/PaMora08/frontEndAngular/blob/master/src/assets/mariposa.jpg",
-    "imgPerfil": "https://github.com/PaMora08/frontEndAngular/blob/master/src/assets/myAvatar.png",
+    "imgFondo": "https://bit.ly/3zDw181",
+    "imgPerfil": "https://bit.ly/3Qc1J34",
     "posicion": "Fullstack Web Developer",
     "ubicacion": "Santa Fe (Argentina)",
     "acercaDe": "Docente de matemática y de tecnología. Egresada del terciario Urquiza en Rosario. ",
@@ -9,14 +9,14 @@
         {
             "nombre": "Esc. Superior Nº 49 Cap. Gral. J.J. Urquiza, Nivel Superior. Rosario, Santa Fe",
             "titulo": "Analista de sistemas de Computación",
-            "img": "https://lh3.googleusercontent.com/8NP3OPLP5sC3gpVQrBVhWY0ogBoEqQf2jxExQirGBy2XJOUoMqBkTnx1-YVwSmO-co64YaVuV6biu9ygjrMDwQfnHC_K0EwObEtOKJkK4hdtQ7WLcGAPPI7P0rZS4kdxtkwox9DnYPmi97SUBt0RuzgtAKMCGNDjUmZt99r6wpUf3p2RSvrmrzpTlLhaxfy9qOASfANDxYjzSY6weakqDXZnWb8GRckTr0JwIDzSlq5wLePpm4wkxJSNTP6B7oJmPyD3L2HWIprbztZIr5uLBEtCDqLIuSXn98Ttt7g5hixNGJdF9IG2DJtywMK1YHHlKvc3NydhNyrX2PtnMObVG6Bib-MHV8UkwnQK6TSKOkSF3eLAITWLZgydHnukk9bVpxkmtcm6RfTiZPAR7WWA2t6VTFkqB71W4ZPmkw_R44x3SpXR9AylSOXuKUr6p0VnEoL3v2QGhFNUverAqVIV4HHQKzo4IJdvNOBvVOXz469fdfWGcEwKobg3xBiXcSC8UBtBmB-I9ZLcLzNj1RwQf16A7ZwEuEdZMQ_Jt-ZnsbGp1I1lZKNTakLTCAs0tPD8KQ3xh6m_BMUHR69W0SzM4Pi0GLhekHI8gXAekhr1EGsRFP_938acIWH5WxTtnpyNA-tqZFhwEVBtqjUvdblbdlWVqHI4IPx5zuRbmq6hcz_f33nImeH8b7aOZ9dCaoQXtgxt6GSxXD7x_VNBTBgjAQJpcNWJjksJqHCckzt7jBdqMMpQR-DNgYE3X1dSY7o84Ky9h-N2GIxdEH8hUlr43Vqh5Z0gPQt83TsN=w248-h226-no?authuser=0",
+            "img": "https://bit.ly/3p1SXJ5",
             "comienzo": "2011",
             "fin": "2013"
         },
         {
             "nombre": "Universidad Tecnológica Nacional Regional Mendoza",
             "titulo": "Ingenieria en Sistemas de Computación",
-            "img": "http://www.frm.utn.edu.ar/templates/ja_spica/images/logo-blue.gif",
+            "img": "https://bit.ly/3QbheZe",
             "comienzo": "1999",
             "fin": "2002"
         },
@@ -37,15 +37,15 @@
     "proyectos": [
         {
             "nombre": "Tienda de Tejidos Online",
-            "img": "https://lh3.googleusercontent.com/n2rKDyMjnoXrzaEv_nb5S0zaKVLZj4RO950Txipf_oHWC-Bv_cmWsnKj4JGQSep5blAtlqtG9JfAB1wVlmSatkQrAZ9PCYwDNddnSuYfnfy-bgo49Gn4ox47w0zPMxAQlYLPtPXbd3qNPU5A1BevVH3Qz7sqFXMCfOvonNCZ9ofXqOW-VBMXRhoAhbiN9rlRO74jgHvXoRDAT_1902abbQO5yQ4PgMaebKGMMnybfupSKJfJc3Tu4z4J4b5zaRkbEgY3ZHbSRGkgwPStZaqo1V_xdjJ2hp0pLyx5cNHbuNv1qb4CTH-3lEwfLV5fMj_xdhfAhPEqBrubMz_AozZkj4jJ7_cWiTyFlQOqUGA1cnWeIqSWw0qGGyLoz-hDwD1vW0MXUYzaIconEmN9-OIKZG160An4eZIgBQ1HrLO1UU8HDGMnlpsfzP662N0B8_LSJ_ug3ADTqtvLxZY78v6uja5z_UnbfS52tPGLips3dG1xz8I7JQ4r-QCG-zEqvuB26WNWr1QcaCEfMtPtbgiNNdKnvInHJBKTTXuyXjUIbZgwFcu8x9DxD_bSbvupqz98xGp53qL_UuYPKtlrgdOSR5zWkbtL9nB8BbND99kqqfrQX6FCaTl3d4NmTp6LhS82A7YyHO9JA0Sw6T9_p5Ok22vAnDVSx2MsjTOxQ0sv7mBNcg0h6x25hc6cku7eJe8ERe3dG5HdnmYEd_N4uNr1LEcip8di9ofcebxNeT-tU3IAQ8nyV7kgMHlJUB9M-E2m6P_zqYPmSyicO_b4R-GMNhYmTym4SsRNMSGQ=w1119-h600-no?authuser=0",
+            "img": "https://bit.ly/3QaotR8",
             "descripcion": "Sitio web de tejidos, desarrollado en HTML5, CSS, BOOTSTRAP Y JAVASCRIPT en el curso de Full Stack Java dictado por la ciudad de Buenos Aires a través del programa Codo a Codo 4.0",
-            "url": "https://pamora08.github.io/TPCodoACodo/"
+            "url": "https://bit.ly/3wcINJR/"
         },
         {
             "nombre": "Tienda de Tejidos Online",
-            "img": "https://lh3.googleusercontent.com/n2rKDyMjnoXrzaEv_nb5S0zaKVLZj4RO950Txipf_oHWC-Bv_cmWsnKj4JGQSep5blAtlqtG9JfAB1wVlmSatkQrAZ9PCYwDNddnSuYfnfy-bgo49Gn4ox47w0zPMxAQlYLPtPXbd3qNPU5A1BevVH3Qz7sqFXMCfOvonNCZ9ofXqOW-VBMXRhoAhbiN9rlRO74jgHvXoRDAT_1902abbQO5yQ4PgMaebKGMMnybfupSKJfJc3Tu4z4J4b5zaRkbEgY3ZHbSRGkgwPStZaqo1V_xdjJ2hp0pLyx5cNHbuNv1qb4CTH-3lEwfLV5fMj_xdhfAhPEqBrubMz_AozZkj4jJ7_cWiTyFlQOqUGA1cnWeIqSWw0qGGyLoz-hDwD1vW0MXUYzaIconEmN9-OIKZG160An4eZIgBQ1HrLO1UU8HDGMnlpsfzP662N0B8_LSJ_ug3ADTqtvLxZY78v6uja5z_UnbfS52tPGLips3dG1xz8I7JQ4r-QCG-zEqvuB26WNWr1QcaCEfMtPtbgiNNdKnvInHJBKTTXuyXjUIbZgwFcu8x9DxD_bSbvupqz98xGp53qL_UuYPKtlrgdOSR5zWkbtL9nB8BbND99kqqfrQX6FCaTl3d4NmTp6LhS82A7YyHO9JA0Sw6T9_p5Ok22vAnDVSx2MsjTOxQ0sv7mBNcg0h6x25hc6cku7eJe8ERe3dG5HdnmYEd_N4uNr1LEcip8di9ofcebxNeT-tU3IAQ8nyV7kgMHlJUB9M-E2m6P_zqYPmSyicO_b4R-GMNhYmTym4SsRNMSGQ=w1119-h600-no?authuser=0",
+            "img": "https://bit.ly/3QaotR8",
             "descripcion": "Sitio web de tejidos, desarrollado en HTML5, CSS, BOOTSTRAP Y JAVASCRIPT en el curso de Full Stack Java dictado por la ciudad de Buenos Aires a través del programa Codo a Codo 4.0",
-            "url": "https://pamora08.github.io/TPCodoACodo/" 
+            "url": "https://bit.ly/3wcINJR/" 
         }
     ]
 }
