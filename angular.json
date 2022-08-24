@@ -72,6 +72,7 @@
           "configurations": {
             "production": {
               "browserTarget": "mi-portfolio:build:production"
+              
             },
             "development": {
               "browserTarget": "mi-portfolio:build:development"

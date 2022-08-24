@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PortfolioService } from 'src/app/service/portfolio.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -13,8 +13,8 @@ export class AcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.myPortfolio = data;
+      console.log("Estos son los datos de acercaDe:" + data);
+      this.myPortfolio = data[0];
     });
   }
 

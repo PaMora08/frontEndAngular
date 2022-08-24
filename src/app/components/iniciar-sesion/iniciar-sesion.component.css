@@ -1,0 +1,8 @@
+.m-5{
+    padding-top: 5%;
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100vh-75px-75px); /* para que el footer quede abajo*/
+    margin: auto;
+    z-index: 2;
+}

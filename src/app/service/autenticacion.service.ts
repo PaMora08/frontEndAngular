@@ -8,7 +8,6 @@ import { map } from 'rxjs';
 })
 export class AutenticacionService {
 
-  url = "http://localhost:8080/api/auth/login";
   currentUserSubject : BehaviorSubject<any>;
   constructor(private http:HttpClient) { 
 
@@ -17,8 +16,9 @@ export class AutenticacionService {
 
   }
   IniciarSesion(credenciales:any):Observable<any>{
-    return this.http.post(this.url, credenciales).pipe(map(data=>{
-      sessionStorage.setItem('currentUser', JSON.stringify(data));
+    return this.http.post(`api/auth/login`, credenciales).pipe(map(data=>{
+      sessionStorage.setItem(`currentUser`, JSON.stringify(data));
+      this.currentUserSubject.next(data);
       return data;
 
     }))

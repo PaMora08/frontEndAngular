@@ -5,6 +5,8 @@
         <button class="btn btn-primary fa fa-github-alt"></button>
         <button class="btn btn-primary fa fa-twitter"></button>
         <button class="btn btn-primary fa fa-instagram"></button>
-        <button class="btn btn-primary" (click)="login()">Login</button>
+        <button class="btn btn-primary" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+        <button class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+
     </div>
 </nav>

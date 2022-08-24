@@ -10,13 +10,14 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PortfolioService } from './servicios/portfolio.service';
+import { PortfolioService } from './service/portfolio.service';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { HysComponent } from './components/hys/hys.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { InterceptorService } from './servicios/interceptor.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InterceptorService } from './service/interceptor.service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,15 @@ import { InterceptorService } from './servicios/interceptor.service';
     FooterComponent,
     HysComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    NewExperienciaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [PortfolioService,
   {provide:HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],

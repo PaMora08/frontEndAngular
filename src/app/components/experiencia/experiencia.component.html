@@ -1,24 +1,28 @@
 <div class="row">
-    <h1> Experiencia </h1>
-    <div class="btn-edit">
-        <a href="#" class="btn-right"> <i class="fa fa-plus"></i> </a>
+    <h1> Experiencia Laboral</h1>
+    <div class="col-lg-2">
+        <button type="button" class="fa-solid fa-pen-to-square" routerLink="/nuevaExperiencia" *ngIf="isLogged">
+        </button>
     </div>
-    <ul class="item-list">
-        <li *ngFor="let exper of experienciaList">
-            <div class="data-container">
-                <a href="#">
-                    <div class="logo-imagen-container">
-                        <img src="" alt="">
-                    </div>
-                </a>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <ul class="item-list">
+            <li *ngFor="let Experiencia of experiencia">
+                <div class="data-container">
+                    <a href="#">
+                        <div class="logo-imagen-container">
+                            <img src="" alt="">
+                        </div>
+                    </a>
                     <div class="list-info">
                         <div>
-                            <h3>{{exper.posicion}}</h3>
-                            <p>{{exper.lugar}} <span> {{exper.modo}} </span></p>
-                            <h4>{{exper.comienzo}}</h4>
+                            <h3>{{Experiencia.nombreExp}}</h3>
+                            <p>{{Experiencia.desripcionExp}}</p>
+                            <h4>{{Experiencia.fechaInicioExp}} - {{Experiencia.fechaFinExp}}</h4>
                         </div>
                     </div>
-            </div>
-         </li>
-    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

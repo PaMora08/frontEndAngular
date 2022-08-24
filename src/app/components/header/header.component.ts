@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { Persona } from 'src/app/models/persona';
+import { PortfolioService } from 'src/app/service/portfolio.service';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,28 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public persona: Persona | undefined;
+  public editPersona: Persona | undefined;
   myPortfolio: any;
-  constructor(private datosPortfolio: PortfolioService) { }
 
+  /*constructor(private headerService: HeaderService) { }*/
+
+  constructor(private datosPortfolio: PortfolioService){}
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.myPortfolio = data;
-    });
+      console.log("Datos personales:" + JSON.stringify(data));
+      this.myPortfolio = data[0];
+    })
   }
+
+ /* public getPersona(): void {
+    this.headerService.getPersona().subscribe({
+      next: (response: Persona) => {
+        this.persona = response;
+      },
+      error: (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    })
+  }*/
 }
