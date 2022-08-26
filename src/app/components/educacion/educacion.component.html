@@ -6,14 +6,14 @@
     <div class="col-1"></div>
     <div class="col-11">
         <ul class="item-list">
-            <li *ngFor="let edu of educacionList">
+            <li *ngFor="let edu of educacion">
                 <a href="#">
-                    <img class="logo-image" [src]="edu.img">
+                    <img class="logo-image" [src]="edu.imgEdu">
                 </a>
                     <div class="list-info">
                        <div>
-                        <h3>{{edu.nombre}}</h3>
-                        <p>{{edu.titulo}}</p>
+                        <h3>{{edu.nombreInst}}</h3>
+                        <p>{{edu.tituloEdu}}</p>
                         <p><time>{{edu.comienzo}}</time> - <time>{{edu.fin}}</time></p>
                     </div>
                 </div>
