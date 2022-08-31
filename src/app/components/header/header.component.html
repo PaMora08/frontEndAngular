@@ -1,10 +1,11 @@
 <header>
     <div *ngIf="myPortfolio">
-        <img class="baner" [src]= "myPortfolio.imgFondo"/>
-        <img class="perfil" [src]= "myPortfolio.imgPerfil"/>
-        
-        <h1>{{myPortfolio.nombre}}</h1>
-        <h5>{{myPortfolio.posicion}}</h5>
-        <h5>{{myPortfolio.ubicacion}}</h5>
+        <img class="baner" [src]="myPortfolio.imgFondo" />
+        <img class="perfil" [src]="myPortfolio.imgPerfil" />
+        <div class="datos">
+            <h1>{{myPortfolio.nombre}}</h1>
+            <h5>{{myPortfolio.posicion}}</h5>
+            <h5>{{myPortfolio.ubicacion}}</h5>
+        </div>
     </div>
 </header>

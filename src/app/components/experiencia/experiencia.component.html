@@ -1,28 +1,39 @@
 <div class="row">
     <h1> Experiencia Laboral</h1>
     <div class="col-lg-2">
-        <button type="button" class="fa-solid fa-pen-to-square" routerLink="/nuevaExperiencia" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaExp" *ngIf="isLogged">
+            Agregar Experiencia Laboral
         </button>
     </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul class="item-list">
-            <li *ngFor="let Experiencia of experiencia">
-                <div class="data-container">
-                    <a href="#">
-                        <div class="logo-imagen-container">
-                            <img src="" alt="">
-                        </div>
-                    </a>
-                    <div class="list-info">
-                        <div>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of experiencia">
+                    <!--<div class="data-container">
+                        <div class="list-info">-->
+                    <div>
+                        <td>
                             <h3>{{Experiencia.nombreExp}}</h3>
-                            <p>{{Experiencia.desripcionExp}}</p>
+                        </td>
+                        <td>
+                            <h3>{{Experiencia.descripcionExp}} </h3>
+                        </td>
+                        <td>
                             <h4>{{Experiencia.fechaInicioExp}} - {{Experiencia.fechaFinExp}}</h4>
-                        </div>
+                        </td>
+                        <td *ngIf="isLogged"> <button class="btn btn-light" routerLink="/editarExp/{{Experiencia.idExp}}">
+                                <i class="bi bi-pencil-fill"></i>EDITAR</button></td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Experiencia.idExp)">
+                                <i class="bi bi-trash3-fill"></i> BORRAR
+                            </button>
+                        </td>
                     </div>
-                </div>
-            </li>
-        </ul>
+                    <!-- </div>
+                    </div> -->
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

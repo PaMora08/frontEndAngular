@@ -3,17 +3,17 @@ export class Educacion {
     nombreInst: string;
     tituloEdu: string;
     imgEdu: string;
-    comienzo: Date;
-    fin: Date;
+    fechaInicioEdu: number;
+    fechaFinEdu: number;
 
     //Constructor
 
-    constructor(nombreInst: string, tituloEdu: string, imgEdu: string, fechaInicio: Date, fechaFinEdu: Date){
+    constructor(nombreInst: string, tituloEdu: string, imgEdu: string, fechaInicioEdu: number, fechaFinEdu: number){
         this.nombreInst = nombreInst;
         this.tituloEdu = tituloEdu;
         this.imgEdu = imgEdu;
-        this.comienzo = fechaInicio;
-        this.fin = fechaFinEdu;
+        this.fechaInicioEdu = fechaInicioEdu;
+        this.fechaFinEdu = fechaFinEdu;
     }
     
 }

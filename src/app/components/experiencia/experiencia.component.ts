@@ -1,4 +1,6 @@
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Experiencia } from 'src/app/models/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -9,23 +11,44 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencia: Experiencia[] = [];
+  public experiencia: Experiencia[] = [];
+  public editExperiencia: Experiencia | undefined;
+  public borrarExperiencia: Experiencia | undefined;
+  
+
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
-  isLogged= false;
+  isLogged = false;
 
   ngOnInit(): void {
 
-    this.cargarExperiencia();    
-    if(this.tokenService.getToken()){
-      this.isLogged= true;
-    }else{
+    this.cargarExperiencia();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
       this.isLogged = false;
     }
   }
 
-  cargarExperiencia():void{
-    this.sExperiencia.lista().subscribe(data => {this.experiencia = data;})
-  }
+  cargarExperiencia(): void {
+    this.sExperiencia.lista().subscribe(
+      data =>{
+        this.experiencia = data;
+      } )
+     }
 
+
+  delete(idExp?: number):void{
+
+    if(idExp != undefined ){
+      this.sExperiencia.delete(idExp).subscribe(
+        data => {
+          this.cargarExperiencia();
+        }, err => {
+          alert("No se pudo eliminar la experiencia laboral");
+          this.cargarExperiencia();
+        }
+      )
+    }
+  }
 }
