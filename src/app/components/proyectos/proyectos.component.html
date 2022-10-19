@@ -6,13 +6,12 @@
     <div class="card-group">
         <div class="card" *ngFor="let proyec of proyectoList">
             <div class="face front">
-                <img class="img-fluid" [src]="proyec.img">
-                <h3>{{proyec.nombre}}</h3>
+                <img class="img-fluid" [src]="proyec.imgProyecto">
+                <h3>{{proyec.nombreProy}}</h3>
             </div>
             <div class="face back">
-                <h3>{{proyec.nombre}}</h3>
                 <p>{{proyec.descripcion}}</p>
-                    <a href={{proyec.url}} class="btn btn-outline-primary btn-block">Ver más... </a>
+                    <a href={{proyec.urlProyecto}} class="btn btn-outline-primary btn-block">Ver más... </a>
             </div>
         </div>
     </div>

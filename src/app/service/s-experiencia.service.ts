@@ -8,25 +8,27 @@ import { Experiencia } from '../models/experiencia';
 })
 export class SExperienciaService {
 
+  expUrl= `/api/laboral/`;
+
   constructor(private httpClient: HttpClient) { }
-  
-  public lista(): Observable<Experiencia[]>{
-    return this.httpClient.get<Experiencia[]>(`api/laboral/listaExperiencia`);
+
+  public lista(): Observable<Experiencia[]> {
+    return this.httpClient.get<Experiencia[]>(this.expUrl + `listaExperiencia`);
   }
 
- /* public detail(id:number):Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.expURL + `detail/${id}`);
-  }*/
-
-  public save(experiencia: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(`api/laboral/createExperiencia`, experiencia);
+  public create(experiencia: Experiencia): Observable<Experiencia> {
+    return this.httpClient.post<Experiencia>( this.expUrl + `createExperiencia`, experiencia);
   }
 
-  public update(id: number, experiencia: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(`api/laboral/updateExperiencia/{idExp}`, experiencia);
+  public detail(id: number): Observable<Experiencia> {
+    return this.httpClient.get<Experiencia>(this.expUrl + `detail/${id}`);
   }
 
-  public delete(id: number):Observable<any>{
-    return this.httpClient.delete<any>(`api/laboral/deleteExperiencia/{idExp}`);
+  public update(experiencia: Experiencia): Observable<Experiencia> {
+    return this.httpClient.put<Experiencia>(this.expUrl + `update`, experiencia);
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.httpClient.delete<any>( this.expUrl + `delete/${id}`);
   }
 }

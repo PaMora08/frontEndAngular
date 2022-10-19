@@ -21,7 +21,7 @@ export class NewExperienciaComponent implements OnInit {
 
   onCreate(): void{
     const expe = new Experiencia(this.nombreExp, this.descripcionExp, this.fechaInicioExp, this.fechaFinExp);
-    this.sExperiencia.save(expe).subscribe(data => {
+    this.sExperiencia.create(expe).subscribe(data => {
       alert("Experiencia agregrada");
       this.router.navigate(['']);
      }, err => {alert("Falló la carga de la experiencia laboral");

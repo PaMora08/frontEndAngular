@@ -1,28 +1,33 @@
 <div class="row">
     <h1> Experiencia Laboral</h1>
     <div class="col-lg-2">
-        <button type="button" class="fa-solid fa-pen-to-square" routerLink="/nuevaExperiencia" *ngIf="isLogged">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaexp" *ngIf="isLogged"> Agregar Experiencia
         </button>
     </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul class="item-list">
-            <li *ngFor="let Experiencia of experiencia">
-                <div class="data-container">
-                    <a href="#">
-                        <div class="logo-imagen-container">
-                            <img src="" alt="">
-                        </div>
-                    </a>
-                    <div class="list-info">
-                        <div>
-                            <h3>{{Experiencia.nombreExp}}</h3>
-                            <p>{{Experiencia.desripcionExp}}</p>
-                            <h4>{{Experiencia.fechaInicioExp}} - {{Experiencia.fechaFinExp}}</h4>
-                        </div>
+
+        <div *ngFor="let Experiencia of experiencia">
+            <div class="data-container">
+                <a href="#">
+                    <div class="logo-imagen-container">
+                        <img src="" alt="">
+                    </div>
+                </a>
+                <div class="list-info">
+                    <div>
+                        <h3>{{Experiencia.nombreExp}}</h3>
+                        <p>{{Experiencia.descripcionExp}}</p>
+                        <h4>{{Experiencia.fechaInicioExp}} - {{Experiencia.fechaFinExp}}</h4>
+                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.idExp}}" *ngIf="isLogged">
+                            <i class="bi bi-pencil-fill"></i> Editar
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(Experiencia.idExp)" *ngIf="isLogged">
+                            <i class="bi bi-trash-fill"></i> Borrar
+                        </button>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 </div>
