@@ -1,3 +1,4 @@
+/* Armado de las tarjetas*/
 .encabezado{
     height: auto;
     width: 80%;
@@ -9,6 +10,7 @@
     position: relative;
     width: 300px;
     height: 350px;
+    margin-inline: 5%; /*distancia entre las cards*/
 
 }
 .card .face{

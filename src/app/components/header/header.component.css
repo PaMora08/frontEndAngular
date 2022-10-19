@@ -17,9 +17,12 @@
     border: black solid 1px;
 
 }
-.row{
+.row{ 
     height: auto;
     width: 70%;
     margin: 10px 10px;
     padding: 20px;
+}
+.datos{
+    margin-left: 3%;
 }
