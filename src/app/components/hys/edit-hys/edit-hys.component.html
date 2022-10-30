@@ -1,0 +1,20 @@
+<div class="container" *ngIf="editSkill">
+    <div class="row">
+        <div>
+            <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+                <div class="form-group">
+                    <label for="nombreSkill">Nombre del Skill</label>
+                    <input id="nombreSkill" class="form-control" type="text" name="nombreSkill" 
+                    [(ngModel)]="editSkill.nombreSkill" required>
+                </div>
+                <div class="form-group">
+                    <label for="imgSkill"> URL Imagen </label>
+                    <input type="text" ngModel name="imgSkill" class="form-control" id="imgSkill"
+                        placeholder="url imagen" [(ngModel)]="editSkill.imgSkill" required>
+                </div>
+                <button class="btn btn-primary"> Actualizar </button>
+
+            </form>
+        </div>
+    </div>
+</div> 

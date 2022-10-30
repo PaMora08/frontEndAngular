@@ -1,13 +1,16 @@
 .row{
     height: auto;
-    width: 70%;
-    margin: 10px 10px;
+    width: 100%;
     padding: 20px;
 }
 div{
     display: inline;
 }
 img{
-    padding: 40px;
+    padding: 30px;
     margin: 10px 10px;
+}
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
 }

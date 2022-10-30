@@ -1,15 +1,27 @@
 <div class="row">
-    <h1>Hard & Soft Skills</h1>
-    <div class="img"> 
-        <img src="../../../assets/html-5.png" alt="" width="200" height="200">
-        <img src="../../../assets/css.png" alt="" width="200" height="200">
-        <img src="../../../assets/javascript.png" alt="" width="200" height="200">
-        <img src="../../../assets/java.png" alt="" width="200" height="200">
-        <img src="../../../assets/github.png" alt="" width="200" height="200">
-        <img src="../../../assets/piton.png" alt="" width="200" height="200">
-        <img src="../../../assets/mysql.png" alt="" width="200" height="200">
-        <img src="../../../assets/spring-seeklogo.com.svg" alt="" width="200" height="200">
-        <img src="../../../assets/agile.png" alt="" width="200" height="200">
-        <img src="../../../assets/pngegg.png" alt="" width="250" height="250">
+    <h1> Hard & Soft Skills</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaSkill" *ngIf="isLogged"> Agregar Skill
+        </button>
+        <br>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+
+        <div *ngFor="let hys of skill">
+            <div class="data-container">
+                <div class="list-info">
+                    <div>
+                        <img class="logo-image" [src]="hys.imgSkill" width="200">
+                        <button class="btn btn-light" routerLink="/edithys/{{hys.idSkill}}" *ngIf="isLogged">
+                            <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="btn btn-danger" (click)="delete(hys.idSkill)" *ngIf="isLogged">
+                            <i class="bi bi-trash-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

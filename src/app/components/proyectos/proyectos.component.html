@@ -1,17 +1,30 @@
 <div class="encabezado">
     <h1> Proyectos realizados </h1>
-    <div class="btn-edit">
-        <a href="#" class="bt-right"> <i class="fa fa-pen"></i> </a>
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-primary" routerLink="/nuevoproy" *ngIf="isLogged"> Agregar Proyecto
+        </button>
     </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <br>
+
     <div class="card-group">
         <div class="card" *ngFor="let proyec of proyectoList">
+           
             <div class="face front">
                 <img class="img-fluid" [src]="proyec.imgProyecto">
                 <h3>{{proyec.nombreProy}}</h3>
+                
             </div>
             <div class="face back">
                 <p>{{proyec.descripcion}}</p>
                     <a href={{proyec.urlProyecto}} class="btn btn-outline-primary btn-block">Ver más... </a>
+                    <button class="btn btn-light" routerLink="/editproy/{{proyec.idProyecto}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-fill"></i> 
+                    </button>
+                    <button class="btn btn-danger" (click)="delete(proyec.idProyecto)" *ngIf="isLogged">
+                        <i class="bi bi-trash-fill"></i> 
+                    </button>
             </div>
         </div>
     </div>

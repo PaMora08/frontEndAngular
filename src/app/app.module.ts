@@ -19,6 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterceptorService } from './service/interceptor.service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { EditHysComponent } from './components/hys/edit-hys/edit-hys.component';
+import { NewHysComponent } from './components/hys/new-hys/new-hys.component';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto/edit-proyecto.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de/edit-acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
     IniciarSesionComponent,
     PortfolioComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditHysComponent,
+    NewHysComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    EditAcercaDeComponent
   ],
   imports: [
     BrowserModule,

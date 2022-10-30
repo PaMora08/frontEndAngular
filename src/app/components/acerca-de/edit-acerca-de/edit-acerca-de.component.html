@@ -1,0 +1,14 @@
+<div class="container" *ngIf="myPortfolio">
+    <div class="row">
+        <div>
+            <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+                <div class="form-group">
+                    <label for="acercaDe">Acerca de</label>
+                    <input id="acercaDe" class="form-control" type="text" name="acercaDe" 
+                    [(ngModel)]="myPortfolio.acercaDe" required>
+                </div>         
+                <button class="btn btn-primary"> Actualizar </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,71 @@
 <header>
+    <div class="row main-container">
+        <div *ngIf="myPortfolio">
+            <img class="baner" [src]="myPortfolio.imgFondo" />
+            <img class="perfil" [src]="myPortfolio.imgPerfil" />
+            <div class="datos">
+                <h1>{{myPortfolio.nombre}}</h1>
+                <h5>{{myPortfolio.posicion}}</h5>
+                <h5>{{myPortfolio.ubicacion}} &nbsp;&nbsp;
+                <a (click)="onOpenModal('edit', myPortfolio)" data-bs-toggle="modal" data-bs-target="#editPersonaModal"
+                    class="btn btn-light" data-bs-placement="top" data-bs-original-title="Editar" *ngIf="isLogged">
+                    <i class="bi bi-pencil-fill"></i> </a></h5>
+            </div>
+            <div class="col-2 text-left">
+                
+            </div>
+        </div>
+    </div>
+</header>
+<div class="modal fade" id="editPersonaModal" tabindex="-1" role="dialog" aria-labelledby="editPersonaModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editPersonaModalLabel"> Editar Datos Personales de {{myPortfolio?.nombre}}
+                </h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"> &times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form #editForm="ngForm">
+                    <div class="form-group">
+                        <label for="name"> Ubicación</label>
+                        <input type="text" ngModel="{{myPortfolio?.ubicacion}}" name="ubicacion" class="form-control"
+                            id="ubicacion" placeholder="Ubicación" required>
+                    </div>
+                    <input type="hidden" ngModel="{{myPortfolio?.nombre}}" name="nombre" class="form-control"
+                    id="nombre" placeholder="nombre"> 
+                    <div class="form-group">
+                        <input type="hidden" ngModel="{{myPortfolio?.imgFondo}}" name="imgFondo" class="form-control"
+                    id="imgFondo" placeholder="imgFondo"> 
+                    <input type="hidden" ngModel="{{myPortfolio?.imgPerfil}}" name="imgPerfil" class="form-control"
+                    id="imgPerfil" placeholder="imgPerfil"> 
+                    <input type="hidden" ngModel="{{myPortfolio?.acercaDe}}" name="acercaDe" class="form-control"
+                    id="acercaDe" placeholder="acercaDe"> 
+                        <label for="name"> Posición</label>
+                        <input type="text" ngModel="{{myPortfolio?.posicion}}" name="posicion" class="form-control"
+                            id="posicion" placeholder="posicion" required>
+                    </div>
+                    <input type="hidden" ngModel="{{myPortfolio?.idPersona}}" name="idPersona" class="form-control"
+                        id="idPersona" placeholder="idPersona">
+
+                    <div class="modal-footer">
+                        <button type="button" id="" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Cerrar
+                        </button>
+                        <button (click)="onUpdatePortfolio(editForm.value)" data-bs-dismiss="modal"
+                            class="btn btn-primary"> Guardar cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<header>
     <div *ngIf="myPortfolio">
         <img class="baner" [src]="myPortfolio.imgFondo" />
         <img class="perfil" [src]="myPortfolio.imgPerfil" />
@@ -8,4 +75,5 @@
             <h5>{{myPortfolio.ubicacion}}</h5>
         </div>
     </div>
-</header>
+</header> 
+-->

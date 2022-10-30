@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/service/portfolio.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -9,13 +10,25 @@ import { PortfolioService } from 'src/app/service/portfolio.service';
 export class AcercaDeComponent implements OnInit {
   myPortfolio: any;
 
-  constructor(private datosPortfolio: PortfolioService) { }
+  constructor(private datosPortfolio: PortfolioService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log("Estos son los datos de acercaDe:" + data[0]);
-      this.myPortfolio = data[0];
-    });
+
+    this.cargarAcercaDe();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+    cargarAcercaDe(): void {
+      this.datosPortfolio.obtenerDatos().subscribe(data => {
+        this.myPortfolio = data[0];
+      });
+
   }
 
 }

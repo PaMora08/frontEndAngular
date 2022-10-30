@@ -1,6 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/models/persona';
 import { PortfolioService } from 'src/app/service/portfolio.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-header',
@@ -12,24 +14,49 @@ export class HeaderComponent implements OnInit {
   public editPersona: Persona | undefined;
   myPortfolio: any;
 
-  /*constructor(private headerService: HeaderService) { }*/
+  
+  constructor(private datosPortfolio: PortfolioService, private tokenService: TokenService){}
 
-  constructor(private datosPortfolio: PortfolioService){}
+  isLogged = false;
+
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log("Datos personales:" + JSON.stringify(data));
-      this.myPortfolio = data[0];
-    })
+    this.cargarPortfolio();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false; 
+    }
   }
 
- /* public getPersona(): void {
-    this.headerService.getPersona().subscribe({
+  cargarPortfolio(): void {
+    this.datosPortfolio.obtenerDatos().subscribe(data => { this.myPortfolio = data[0]; })
+  }
+
+  public onOpenModal(mode: string, persona?: Persona): void {
+    const container = document.getElementById('main-container');
+    const button = document.createElement('button');
+    button.style.display = 'none';
+    button.setAttribute('data-toggle', 'modal');
+    if (mode === 'edit') {
+      this.myPortfolio = persona;
+      button.setAttribute('data-target', '#editPersonaModal')
+
+    }
+    container?.appendChild(button);
+    button.click();
+  }
+
+  public onUpdatePortfolio(persona: Persona) {
+    this.editPersona = persona;
+    document.getElementById('add-persona-form')?.click();
+    this.datosPortfolio.actualizarPersona(persona).subscribe({
       next: (response: Persona) => {
-        this.persona = response;
-      },
-      error: (error: HttpErrorResponse) => {
+        console.log(response);
+        this.cargarPortfolio();
+      }, error: (error: HttpErrorResponse) => {
         alert(error.message);
       }
     })
-  }*/
+  }
+ 
 }

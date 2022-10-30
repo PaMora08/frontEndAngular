@@ -1,6 +1,11 @@
 <div class="row">
-        <div class="col-xs-12 col-sm-10 col-lg-10">
-            <h1>Sobre mí</h1>
-            <h4>{{myPortfolio.acercaDe}}</h4>
-        </div>
+    <div *ngIf="myPortfolio">
+    <div class="col-xs-12 col-sm-10 col-lg-10">
+        <h1>Sobre mí</h1>
+        <h4>{{myPortfolio.acercaDe}}  &nbsp;&nbsp;
+        <button class="btn btn-light" routerLink="/editacercade/1}" *ngIf="isLogged">
+            <i class="bi bi-pencil-fill"></i> 
+        </button> </h4>
+    </div>
+</div>
 </div>
