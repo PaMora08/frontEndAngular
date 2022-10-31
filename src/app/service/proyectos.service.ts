@@ -7,23 +7,23 @@ import { Proyectos } from '../models/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  api = 'https://portfback.herokuapp.com/';
+  api = 'https://portfback.herokuapp.com/api/proyectos';
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<Proyectos[]>{
-    return this.httpClient.get<Proyectos[]>(`api/proyectos/lista`);
+    return this.httpClient.get<Proyectos[]>(this.api + `/lista`);
   }
 
   public detail(idProyecto: number): Observable<Proyectos> {
-    return this.httpClient.get<Proyectos>(`api/proyectos/detail/${idProyecto}`);
+    return this.httpClient.get<Proyectos>(this.api + `/detail/${idProyecto}`);
   }
 
   public save(proy: Proyectos): Observable<any>{
-    return this.httpClient.post<any>(`api/proyectos/create`, proy);
+    return this.httpClient.post<any>(this.api + `/create`, proy);
   }
 
   public update(proyecto: Proyectos): Observable<Proyectos> {
-    return this.httpClient.put<Proyectos>(`api/proyectos/update`, proyecto);
+    return this.httpClient.put<Proyectos>(this.api + `/update`, proyecto);
   }
 
   public delete(id: number):Observable<any>{
