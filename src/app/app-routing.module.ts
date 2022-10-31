@@ -9,9 +9,10 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { EditProyectoComponent } from './components/proyectos/edit-proyecto/edit-proyecto.component';
 import { NewProyectoComponent } from './components/proyectos/new-proyecto/new-proyecto.component';
+import { GuardGuard } from './service/guard.guard';
 
 const routes: Routes = [
-  {path: 'portfolio', component:PortfolioComponent},
+  {path: 'portfolio', component:PortfolioComponent, canActivate: [GuardGuard]},
   {path:'iniciar-sesion', component:IniciarSesionComponent},
   {path: '', redirectTo:'portfolio', pathMatch:'full'},
   {path: 'nuevaexp', component: NewExperienciaComponent},
