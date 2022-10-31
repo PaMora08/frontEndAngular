@@ -28,7 +28,7 @@ ngOnInit(): void {
   if(this.tokenService.getToken()){
     this.isLogged = true;
     this.isLogginFail = false;
-    this.roles = this.tokenService.getAuthorities();
+    this.roles = this.tokenService.getAuthorities(); 
   }
 }
 
@@ -38,7 +38,7 @@ onLogin(){
     this.isLogged = true;
     this.isLogginFail = false;
     this.tokenService.setToken(data.token);
-    this.tokenService.setUsername(data.email);
+    this.tokenService.setUserName(data.email);
     this.tokenService.setAuthorities(data.authorities);
     this.roles = data.authorities;
     this.ruta.navigate(['']);

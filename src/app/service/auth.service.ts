@@ -9,16 +9,16 @@ import { NuevoUsuario } from '../models/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-api = 'https://portfback.herokuapp.com/';
+api = `https://portfback.herokuapp.com/api/auth`;
   constructor(private httpClient: HttpClient) { 
   }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(`api/auth/nuevo`, nuevoUsuario);
+    return this.httpClient.post<any>(this.api +`/nuevo`, nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(`api/auth/login`, loginUsuario);
+    return this.httpClient.post<JwtDto>(this.api + `/login`, loginUsuario);
     
   }
 }
