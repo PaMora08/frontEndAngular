@@ -7,6 +7,7 @@ import { Proyectos } from '../models/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
+  api = 'https://portfback.herokuapp.com/';
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<Proyectos[]>{

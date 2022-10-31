@@ -8,7 +8,7 @@ import { Experiencia } from '../models/experiencia';
 })
 export class SExperienciaService { 
 
-  expUrl= `/api/laboral/`;
+  expUrl= `https://portfback.herokuapp.com/api/laboral/`;
 
   constructor(private httpClient: HttpClient) { }
 

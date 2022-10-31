@@ -7,13 +7,13 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class HeaderService {
-  
+  api = `https://portfback.herokuapp.com/api/persona`;
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<Persona>{
-    return this.http.get<Persona>(`api/persona/traer`);
+    return this.http.get<Persona>(this.api + `/traer`);
   }
   public updatePersona(persona: Persona): Observable<Persona>{
-    return this.http.put<Persona>(`api/persona/editar`, persona);
+    return this.http.put<Persona>(this.api + `/editar`, persona);
   }
 }

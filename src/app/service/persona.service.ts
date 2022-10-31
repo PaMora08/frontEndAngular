@@ -7,7 +7,7 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class PersonaService {
-
+  api = `https://portfback.herokuapp.com/`;
   constructor(private http:  HttpClient) { }
 
   public getPersona(): Observable<Persona>{

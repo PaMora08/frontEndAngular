@@ -7,7 +7,8 @@ import { Skill } from '../models/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  expURL = '/api/skill/';
+
+expURL= `https://portfback.herokuapp.com/api/skill/`;
 
   constructor(private httpClient: HttpClient) { }
 

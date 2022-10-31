@@ -7,14 +7,14 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class PortfolioService {
-
+  api = 'https://portfback.herokuapp.com/api/persona';
   constructor(private http: HttpClient) { }
 
   obtenerDatos(): Observable<any> {
-    return this.http.get<any>(`api/persona/traer`);
+    return this.http.get<any>(this.api + `/traer`);
   }
 
   public actualizarPersona(persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>(`api/persona/editar`, persona);
+    return this.http.put<Persona>(this.api + `/editar`, persona);
   }
 }
