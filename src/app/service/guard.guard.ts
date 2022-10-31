@@ -14,9 +14,12 @@ export class GuardGuard implements CanActivate {
     let currentUser = this.autenticacionServicio.UsuarioAutenticado;
     if (currentUser && currentUser.accessToken) {
       return true;
+      console.log("pasó por true de guard")
     }
     else {
       this.rutas.navigate(['iniciar-sesion']);
+      console.log("No pasó por true de guard")
+
       return false;
     }
 

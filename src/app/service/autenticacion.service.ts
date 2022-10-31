@@ -11,7 +11,6 @@ export class AutenticacionService {
   currentUserSubject : BehaviorSubject<any>;
   constructor(private http:HttpClient) { 
 
-    console.log("El servicio de autentificación está corriendo");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
 
   }
@@ -19,6 +18,8 @@ export class AutenticacionService {
     return this.http.post(`api/auth/login`, credenciales).pipe(map(data=>{
       sessionStorage.setItem(`currentUser`, JSON.stringify(data));
       this.currentUserSubject.next(data);
+      console.log("esto es lo que tiene data en iniciar sesion auth" + JSON.stringify(data));
+      
       return data;
 
     }))
